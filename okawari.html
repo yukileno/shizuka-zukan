@@ -686,7 +686,7 @@ function startRoulette(k){
   const target=(idx+.5+(Math.random()-.5)*.6)*a;
   const cur=((wRot%TAU)+TAU)%TAU,end=((-target%TAU)+TAU)%TAU;
   const delta=((end-cur)+TAU)%TAU+TAU*(5+Math.floor(Math.random()*2));
-  const from=wRot,dur=4600,t0=performance.now();let lastSeg=-1;
+  const from=wRot,dur=2300,t0=performance.now();let lastSeg=-1;
   (function step(now){
     const p=Math.min(1,(now-t0)/dur);
     wRot=from+delta*easeOut(p);
